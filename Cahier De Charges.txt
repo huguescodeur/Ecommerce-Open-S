@@ -1,0 +1,21 @@
+Réalisation d’une application web de gestion de vente avec Intelligence Artificielle
+
+CONTEXT DU PROJET
+
+Le projet vise à développer une application web robuste de gestion des ventes, fournissant une plateforme complète pour simplifier et optimiser l'ensemble du processus de vente. Avec une touche d'intelligence artificielle, l'application vise à offrir des fonctionnalités avancées pour améliorer l'efficacité opérationnelle et l'expérience client.
+
+TÂCHES
+
+Ingestion des données sauvegardées dans la base de données et automatisation des processus manuels associés à la gestion des ventes. Les données du fichier des ventes au format PDF (le fichier PDF contient les informations suivantes : l’identifiant du client, le nom et prénom, le genre du client, le produit acheté, le type du produit acheté, le prix, la date et l’heure) doivent être insérées dans la base de données du système de gestion. Fournir une interface utilisateur conviviale pour une navigation intuitive. Optimiser les opérations de vente pour une prise de décision plus rapide. Intégrer des fonctionnalités d'intelligence artificielle pour améliorer les performances et la personnalisation.
+
+FONCTIONNALITÉS DATA & IA :
+
+Collecte, analyse et traitement des données. Dashboard permettant de voir les indicateurs de performance (meilleur produit vendu, meilleur employé, Top 5 des meilleurs clients, etc.). Un bouton "Prédiction" qui embarque un modèle de prédictions via API permettant de prédire le produit qui sera le mieux vendu en Avril 2024.
+
+AGREGATEUR DE FONCTIONNALITES :
+
+Gestion des Produits : Permettre l'ajout, la modification et la suppression de produits, ainsi que la gestion des catégories et des caractéristiques associées. Gestion des Clients : Suivi des informations clients, historique des achats, gestion des comptes clients et possibilité de segmentation de la clientèle. Gestion des Commandes : Suivi des commandes en temps réel, gestion des statuts de commande (en attente, expédiée, livrée, etc.). Tableau de bord : Un tableau de bord intuitif offrant une vue d'ensemble des ventes, des performances des produits et des indicateurs clés. Gestion des Utilisateurs : Système d'authentification sécurisé, avec différents niveaux d'accès (administrateur, vendeur, gestionnaire, etc.). Analyse Prédictive des Ventes : Utilisation de modèles prédictifs pour anticiper les tendances de vente futures, aidant ainsi à ajuster les stratégies marketing et les niveaux de stock. L'utilisateur doit pouvoir exporter et imprimer certaines informations.
+
+Enregistrement des anciennes données de ventes (fichiers Excel, Word, texte, reçu, etc.).
+
+Une proposition améliorative individuelle.

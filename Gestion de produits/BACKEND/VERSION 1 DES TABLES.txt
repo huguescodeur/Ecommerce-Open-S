@@ -1,0 +1,25 @@
+VERSION 1 DES TABLES
+
+Table Utilisateurs :
+Colonnes : Identifiant de l’utilisateur, Nom d’utilisateur, Mot de passe, Niveau d’accès
+Relations : Cette table pourrait être liée à la table Commandes si vous souhaitez suivre quel utilisateur a traité quelle commande.
+
+Table Clients :
+Colonnes : Identifiant du client, Nom, Prénom, Genre, Identifiant de l’utilisateur
+Relations : Cette table sera liée à la table Commandes par l’Identifiant du client et à la table Utilisateurs par l’Identifiant de l’utilisateur.
+
+Table Catégories :
+Colonnes : Identifiant de la catégorie, Nom de la catégorie
+Relations : Cette table sera liée à la table Produits par l’Identifiant de la catégorie.
+
+Table Produits :
+Colonnes : Identifiant du produit, Nom du produit, Type du produit, Prix, Identifiant de la catégorie
+Relations : Cette table sera liée à la table Commandes par l’Identifiant du produit et à la table Catégories par l’Identifiant de la catégorie.
+
+Table Commandes :
+Colonnes : Identifiant de la commande, Identifiant du client, Identifiant du produit, Date et heure de la commande, Statut de la commande
+Relations : Cette table sera liée à la table Clients par l’Identifiant du client et à la table Produits par l’Identifiant du produit.
+
+Table Prédictions :
+Colonnes : Identifiant de la prédiction, Identifiant du produit, Date de la prédiction, Prédiction de vente
+Relations : Cette table sera liée à la table Produits par l’Identifiant du produit.

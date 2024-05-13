@@ -1,0 +1,35 @@
+.div-navbar {
+    height: 50px;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    // background: skyblue;
+    // width: 100%;
+    z-index: 100;
+    // background: red;
+}
+
+.div-gauche {
+    height: 100%;
+    width: 20%;
+}
+
+.div-milieu {
+    height: 100%;
+    width: 60%;
+    align-items: center;
+}
+
+.div-droit {
+    height: 100%;
+    width: 20%;
+    // background: red;
+
+    .div-icon img {
+        width: 30px;
+        padding: 4px;
+    }
+
+}

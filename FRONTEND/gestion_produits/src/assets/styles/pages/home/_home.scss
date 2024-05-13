@@ -1,0 +1,41 @@
+.div-home{
+    // height: 60px;
+    
+    width: 100%;
+
+    .div-home-header{
+        border: 2px solid palegreen;
+        height: 300px;
+        // background: red;
+        // padding: 20px;
+    }
+
+    nav{
+        height: 100%;
+        width: 20%;
+        // border: 2px solid rebeccapurple;
+        // border-radius: 10px;
+        // margin-left: 20px;
+
+    }
+    
+    .div-home-header ul{
+        height: 100%;
+        width: 100%;
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        // padding: 10px 0;
+    }
+
+    .header-baniere{
+        border: 2px solid blue;
+        height: 100%;
+        width: 70%;
+        background: tan;
+    }
+}
+
+@import "../../layouts/banner_slider"

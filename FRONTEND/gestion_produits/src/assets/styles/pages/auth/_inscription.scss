@@ -1,0 +1,26 @@
+.div-inscription {
+
+    .section-form {
+        // background: rebeccapurple;
+
+        @media screen and (max-width: 1015px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .div-form {
+        // border: 2px solid rebeccapurple;
+        margin-top: 2rem;
+    }
+
+    #div-img-form {
+        @media screen and (max-width: 1015px) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    // .form-image {
+    //     background: rebeccapurple;
+    // }
+}

@@ -1,0 +1,27 @@
+INGESTION DES DONNEES : Automatisation des processus manuels associés à la gestion des ventes. Les données du fichier des ventes au format PDF doivent être insérées dans la base de données du système de gestion.
+
+INTERFACE UTILISATEUR CONVIVIALE : Fournir une interface utilisateur conviviale pour une navigation intuitive.
+
+OPTIMISATION DES OPERATIONS DE VENTE : Optimiser les opérations de vente pour une prise de décision plus rapide.
+
+FONCTIONNALITES INTELLIGENCE ARTIFICIELLE : Intégrer des fonctionnalités d’intelligence artificielle pour améliorer les performances et la personnalisation.
+
+DASHBOARD : Un tableau de bord permettant de voir les indicateurs de performance (meilleur produit vendu, meilleur employé, Top 5 des meilleurs clients, etc.).
+
+PREDICTION : Un bouton “Prédiction” qui embarque un modèle de prédictions via API permettant de prédire le produit qui sera le mieux vendu en Avril 2024.
+
+GESTION DES PRODUITS : Permettre l’ajout, la modification et la suppression de produits, ainsi que la gestion des catégories et des caractéristiques associées.
+
+GESTION DES CLIENS : Suivi des informations clients, historique des achats, gestion des comptes clients et possibilité de segmentation de la clientèle.
+
+GESTION DES COMMANDES : Suivi des commandes en temps réel, gestion des statuts de commande (en attente, expédiée, livrée, etc.).
+
+GESTIONS DES UTILISATEURS : Système d’authentification sécurisé, avec différents niveaux d’accès (administrateur, vendeur, gestionnaire, etc.).
+
+ANALYSE PREDICTIVE DES VENTES : Utilisation de modèles prédictifs pour anticiper les tendances de vente futures, aidant ainsi à ajuster les stratégies marketing et les niveaux de stock.
+Exportation et impression des informations : L’utilisateur doit pouvoir exporter et imprimer certaines informations.
+
+ENREGISTREMENT DES ANCIENNES DONNEES : Enregistrement des anciennes données de ventes (fichiers Excel, Word, texte, reçu, etc.).
+
+PROPOSITION AMELIORATION INDIVIDUELLE : Une proposition améliorative individuelle.
+Ces fonctionnalités couvrent un large éventail de tâches, de la gestion des produits et des clients à l’analyse prédictive des ventes. Chaque fonctionnalité nécessitera un travail de développement spécifique.
