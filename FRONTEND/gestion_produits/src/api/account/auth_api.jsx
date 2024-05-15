@@ -41,7 +41,7 @@ export const register = async (
       email,
       password,
       confirm_password,
-      role: role,
+      role,
     });
 
     const tokenResponse = await axios.post("http://localhost:8000/api/token/", {
@@ -64,14 +64,48 @@ export const register = async (
   }
 };
 
-// ? Token is expired
-function isTokenExpired(token) {
-  // Decode the token and check the 'exp' field
-  const decodedToken = jwt_decode.jwtDecode(token);
-  const currentTime = Date.now() / 1000;
+// ? API Login
+export const login = async (email, password) => {
+  try {
+    const response = await axios.post("http://localhost:8000/api/login/", {
+      email,
+      password,
+    });
 
-  return decodedToken.exp < currentTime;
-}
+    console.log(`Response: ${response}`);
+
+    localStorage.setItem("access_token", response.data.access_token);
+    localStorage.setItem("refresh_token", response.data.refresh_token);
+    
+    console.log(data);
+
+    return response.data;
+  } catch (error) {
+    console.error("Erreur lors de l'inscription", error);
+    return error;
+  }
+};
+
+// ? Token is expired
+// function isTokenExpired(token) {
+//   // Decode the token and check the 'exp' field
+//   const decodedToken = jwt_decode.jwtDecode(token);
+//   const currentTime = Date.now() / 1000;
+
+//   return decodedToken.exp < currentTime;
+// }
+
+const isTokenExpired = (token) => {
+  if (!token) {
+    return null;
+  }
+  try {
+    const { exp } = jwt_decode.jwtDecode(token);
+    return Date.now() >= exp * 1000;
+  } catch {
+    return "Error decoding token";
+  }
+};
 
 // ? Get User Info
 export const getUserInfo = async () => {

@@ -1,35 +1,88 @@
 .div-navbar {
-    height: 50px;
-    width: 100%;
+  height: 50px;
+  width: 100%;
 
-    position: fixed;
-    top: 0;
-    transition: 0.3s ease-in-out;
-    // background: skyblue;
-    // width: 100%;
-    z-index: 100;
-    // background: red;
+  position: fixed;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  // background: skyblue;
+  // width: 100%;
+  z-index: 100;
+  // background: red;
+  @media screen and (max-width: 1050px) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 
 .div-gauche {
-    height: 100%;
-    width: 20%;
+  height: 100%;
+  width: 20%;
+
+  .open-menu {
+    // border: solid;
+    margin-right: 8px;
+    font-size: 20px;
+    width: 30px;
+    display: none;
+
+    @media screen and (max-width: 1050px) {
+      // border: 2px solid red;
+      display: block;
+    }
+  }
+
+  .quantum {
+    font-size: 2rem;
+    font-weight: bold;
+
+    @media screen and (max-width: 1050px) {
+      // border: 2px solid red;
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 280px) {
+      // border: 2px solid red;
+      font-size: 1rem;
+    }
+  }
 }
 
 .div-milieu {
-    height: 100%;
-    width: 60%;
-    align-items: center;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+
+  .form-search {
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+  }
 }
 
 .div-droit {
-    height: 100%;
-    width: 20%;
-    // background: red;
+  height: 100%;
+  width: 20%;
+  // background: red;
 
-    .div-icon img {
-        width: 30px;
-        padding: 4px;
+  .div-icon img {
+    width: 30px;
+    padding: 4px;
+
+    @media screen and (max-width: 280px) {
+      padding: 2px;
+      width: 25px;
     }
+  }
 
+  @media screen and (max-width: 1050px) {
+    // border: 2px solid blue;
+    width: 100%;
+    height: 90px;
+    justify-content: end;
+  }
+
+  @media screen and (max-width: 280px) {
+    width: 300px;
+    border: 2px solid red;
+  }
 }

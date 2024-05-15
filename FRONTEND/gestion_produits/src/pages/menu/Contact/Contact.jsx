@@ -1,34 +1,24 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-import { getUserInfo } from "../../../api/account/auth_api";
+import { useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import Footer from "../../../partials/Footer";
 import NavbarLogout from "../../../partials/NavbarLogout";
+import { AppContext } from "../../../App";
 
 const Contact = () => {
-  const [userInfo, setUserInfo] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
-  useEffect(() => {
-    // const refreshUserToken = async () => {
-    //   const oldToken = localStorage.getItem("access_token");
-    //   const newToken = await refreshToken(oldToken);
-    //   localStorage.setItem("access_token", newToken);
-    // };
-
-    const fetchUserInfo = async () => {
-      const info = await getUserInfo();
-      setUserInfo(info);
-    };
-
-    // refreshUserToken();
-    fetchUserInfo();
-  }, []);
-
-  console.log(`Les Infos du User: ${userInfo}`);
+  const { userInfo, loading } = useContext(AppContext);
 
   const estConnecte = localStorage.getItem("access_token") ? true : false;
+
+  useEffect(() => {
+    if (!loading && !estConnecte) {
+      navigate("/connexion", { replace: true, state: { from: location } });
+    }
+  }, [estConnecte, navigate, location, loading]);
 
   const deconnexion = () => {
     localStorage.removeItem("access_token");
@@ -36,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="footer-collant">
       <NavbarLogout />
       {estConnecte ? (
         <p style={{ marginTop: "100px" }}>
@@ -47,7 +37,12 @@ const Contact = () => {
       )}
 
       <button
-        style={{ padding: "10px 8px", backgroundColor: "orange" }}
+        style={{
+          padding: "10px 8px",
+          backgroundColor: "orange",
+          width: "130px",
+          borderRadius: "6px",
+        }}
         onClick={deconnexion}
       >
         Déconnexion

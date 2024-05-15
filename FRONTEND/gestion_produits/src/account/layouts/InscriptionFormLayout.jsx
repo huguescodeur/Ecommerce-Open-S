@@ -1,11 +1,14 @@
 // import { useQuery } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router-dom";
-import rightBag from "../../assets/images/icons/homme-femme-bag.png";
-import { useState, useEffect } from "react";
+import rightBag from "../../assets/images/icons/homme-femme-bag-copy.png";
+import { useState, useEffect, useContext } from "react";
 import { register } from "../../api/account/auth_api";
+import { AppContext } from "../../App";
 
 const InscriptionFormLayout = () => {
   const navigate = useNavigate();
+  //   const { userInfo } = useContext(AppContext);
+  const { setUserInfo } = useContext(AppContext);
 
   const [loading, setLoading] = useState(false);
   const [inscriptionData, setInscriptionData] = useState({
@@ -74,20 +77,25 @@ const InscriptionFormLayout = () => {
       inscriptionData.role
     );
 
+    // console.log(`User Data: ${data}`);
+    console.log("User Data:", data);
+
     if (data instanceof Error) {
-      setError(data.message);
-      console.log(`Error: ${data}`);
+      setError(data.response.data.erreur);
+      console.log(`Error Data: ${data.response.data.erreur}`);
     } else {
+      setUserInfo(data);
+      setLoading(false);
       try {
         if (inscriptionData.role === "client") {
-          navigate("/connexion", { replace: true });
+          navigate("/contact", { replace: true });
         } else if (inscriptionData.role === "vendeur") {
           navigate("/vendeur");
         } else if (inscriptionData.role === "admin") {
           navigate("/admin");
         }
       } catch (error) {
-        console.log(error);
+        console.log(`Error: ${error}`);
       }
     }
 
@@ -106,9 +114,9 @@ const InscriptionFormLayout = () => {
   }, [error]);
 
   return (
-    <div className="mt-28 px-28 section-form">
-      <section className="  text-slate-950 px-12 pt-30 border ">
-        <div className="form-image  relative flex flex-col-reverse justify-around items-center mx-auto sm:py-12 lg:py-6 lg:flex-row lg:justify-between">
+    <div className="mt-8 px-28 section-form">
+      <section className="  text-slate-950 px-12 pt-30 ">
+        <div className="form-image relative flex flex-col-reverse justify-around items-center mx-auto sm:py-12 lg:py-6 lg:flex-row lg:justify-evently">
           <div className="div-form transition ease-in-out delay-150 hover:border-orange-500 w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  border  ">
             {/* shadow-lg */}
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
