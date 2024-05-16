@@ -104,7 +104,7 @@ const Sidebar = () => {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 to="/"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-orange-400 text-white hover:text-gray-800 border-l-4 border-transparent"
@@ -130,7 +130,7 @@ const Sidebar = () => {
                   Panier
                 </span>
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link

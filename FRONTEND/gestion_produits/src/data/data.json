@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "Apple Smart Watch 6 - Special Edition Apple Smart Watch 6 - Special Edition",
+      "price": 299.0,
+      "image": "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-2.png",
+      "description": "Une montre intelligente haut de gamme avec une multitude de fonctionnalités."
+    },
+    {
+      "name": "Heavy cotton shirt",
+      "price": 1500,
+      "image": "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-4.png",
+      "description": "Une chemise en coton lourd, parfaite pour les journées plus fraîches."
+    },
+    {
+      "name": "Choes3",
+      "price": 1000,
+      "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "description": "Un produit fantastique qui offre une excellente valeur."
+    },
+    {
+      "name": "Produit 4",
+      "price": 2000,
+      "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "Produit 5",
+      "price": 2000,
+      "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "Produit 6",
+      "price": 2000,
+      "image": "https://example.com/product-4.png",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    }
+  ]
+}

@@ -9,6 +9,10 @@ import HeaderHome from "./components/HeaderHome";
 // import TopNav from "../../../components/TopNav";
 import Search from "./../../../components/Search";
 import Sidebar from "../../../partials/Sidebar";
+import BestSceller from "./components/BestSceller";
+import data from "../../../data/data.json";
+
+// import ProductCard from "./components/CardProduct";
 
 const Home = () => {
   // const queryKey = useMemo(() => ["cat", Date.now()], []);
@@ -24,9 +28,10 @@ const Home = () => {
   return (
     <div className="div-home  border">
       <NavbarLogout />
+      <Sidebar />
       <Search />
       <HeaderHome />
-      <Sidebar />
+      <BestSceller products={data.products} />
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@
   width: 100%;
 
   .div-home-header {
-    border: 2px solid palegreen;
+    // border: 2px solid palegreen;
     height: 300px;
     margin-top: 5rem;
     // background: red;
@@ -41,10 +41,10 @@
   }
 
   .header-baniere {
-    border: 2px solid blue;
+    // border: 2px solid blue;
     height: 100%;
     width: 70%;
-    background: tan;
+    background: gray;
 
     @media screen and (max-width: 1050px) {
       width: 95%;
@@ -75,5 +75,11 @@
   }
 }
 
-@import "../../layouts/banner_slider";
+.section-produit {
+  @media screen and (max-width: 1050px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
+@import "../../layouts/banner_slider";
