@@ -1,22 +1,22 @@
 import { Typography } from "@material-tailwind/react";
 
 const SITEMAP = [
-  {
-    title: "Company",
-    links: ["About Us", "Careers", "Our Team", "Projects"],
-  },
-  {
-    title: "Help Center",
-    links: ["Discord", "Twitter", "GitHub", "Contact Us"],
-  },
-  {
-    title: "Resources",
-    links: ["Blog", "Newsletter", "Free Products", "Affiliate Program"],
-  },
-  {
-    title: "Products",
-    links: ["Templates", "UI Kits", "Icons", "Mockups"],
-  },
+  // {
+  //   title: "Company",
+  //   links: ["A propos de nous", "Notre équipe"],
+  // },
+  // {
+  //   title: "Help Center",
+  //   links: ["LinkedIn", "Contactez-nous"],
+  // },
+  // {
+  //   title: "Resources",
+  //   links: ["Blog", "Newsletter", "Free Products"],
+  // },
+  // {
+  //   title: "Products",
+  //   links: ["Vêtements", "UI Kits", "Icons", "Mockups"],
+  // },
 ];
 
 const currentYear = new Date().getFullYear();

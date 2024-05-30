@@ -28,6 +28,9 @@ class Vendeur(models.Model):
 class Client(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     numero_de_client = models.CharField(max_length=30, null=True, blank=True)
+ 
+    
+    
     
 # class Administrateur(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE)

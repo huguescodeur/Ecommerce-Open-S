@@ -1,10 +1,35 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { SidebarContext } from "./SidebarContext";
+import { AppContext } from "./../App";
+
+import { useNavigate } from "react-router-dom";
+// import { useEffect } from "react";
 
 const Sidebar = () => {
   const { sidebarOpen, setSidebarOpen } = useContext(SidebarContext);
   const currentYear = new Date().getFullYear();
+
+  const { userInfo } = useContext(AppContext);
+
+  const navigate = useNavigate();
+  // const location = useLocation();
+
+  // const { userInfo, loading } = useContext(AppContext);
+
+  // const estConnecte = localStorage.getItem("access_token") ? true : false;
+
+  // useEffect(() => {
+  //   if (!estConnecte) {
+  //     navigate("/connexion", { replace: true, state: { from: location } });
+  //   }
+  // }, [estConnecte, navigate, location]);
+
+  const deconnexion = () => {
+    localStorage.removeItem("access_token");
+    navigate("/connexion", { replace: true });
+  };
+
   return (
     sidebarOpen && (
       <div className="sidebar fixed flex flex-col top-14 left-0  hover:w-64 md:w-64 h-full text-white transition-all duration-300 border-none z-10 ">
@@ -160,19 +185,38 @@ const Sidebar = () => {
               </Link>
             </li>
 
-            <li>
-              <Link
-                to="/"
-                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-orange-400 text-white hover:text-gray-800 border-l-4 border-transparent"
-              >
-                <span className="inline-flex justify-center items-center ml-4">
-                  <i className="fas fa-sign-out-alt"></i>
-                </span>
-                <span className="ml-2 text-sm tracking-wide truncate">
-                  Déconnexion
-                </span>
-              </Link>
-            </li>
+            {userInfo && (
+              <li>
+                <Link
+                  to="/"
+                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-orange-400 text-white hover:text-gray-800 border-l-4 border-transparent"
+                >
+                  <span className="inline-flex justify-center items-center ml-4">
+                    <i className="fas fa-cog"></i>
+                  </span>
+                  <span className="ml-2 text-sm tracking-wide truncate">
+                    Paramètres
+                  </span>
+                </Link>
+              </li>
+            )}
+
+            {userInfo && (
+              <li>
+                <Link
+                  to="/connexion"
+                  onClick={deconnexion}
+                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-orange-400 text-white hover:text-gray-800 border-l-4 border-transparent"
+                >
+                  <span className="inline-flex justify-center items-center ml-4">
+                    <i className="fas fa-sign-out-alt"></i>
+                  </span>
+                  <span className="ml-2 text-sm tracking-wide truncate">
+                    Déconnexion
+                  </span>
+                </Link>
+              </li>
+            )}
           </ul>
           <p className="mb-14 px-5 py-3 hidden md:block text-center text-xs">
             Copyright © HuguesCodeur - {currentYear}

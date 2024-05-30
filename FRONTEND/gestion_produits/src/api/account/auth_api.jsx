@@ -55,7 +55,7 @@ export const register = async (
     localStorage.setItem("access_token", tokenResponse.data.access);
     localStorage.setItem("refresh_token", tokenResponse.data.refresh);
 
-    console.log(data);
+    // console.log(data);
 
     return response.data;
   } catch (error) {
@@ -76,12 +76,12 @@ export const login = async (email, password) => {
 
     localStorage.setItem("access_token", response.data.access_token);
     localStorage.setItem("refresh_token", response.data.refresh_token);
-    
+
     console.log(data);
 
     return response.data;
   } catch (error) {
-    console.error("Erreur lors de l'inscription", error);
+    console.error("Erreur lors de la connexion", error);
     return error;
   }
 };

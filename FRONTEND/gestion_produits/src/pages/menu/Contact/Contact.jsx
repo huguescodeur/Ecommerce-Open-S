@@ -20,14 +20,15 @@ const Contact = () => {
     }
   }, [estConnecte, navigate, location, loading]);
 
-  const deconnexion = () => {
-    localStorage.removeItem("access_token");
-    navigate("/connexion", { replace: true });
-  };
+  // const deconnexion = () => {
+  //   localStorage.removeItem("access_token");
+  //   navigate("/connexion", { replace: true });
+  // };
 
   return (
     <div className="footer-collant">
       <NavbarLogout />
+      <Sidebar />
       {estConnecte ? (
         <p style={{ marginTop: "100px" }}>
           {userInfo ? `Bonjour, ${userInfo.username}` : ""} !
@@ -36,7 +37,7 @@ const Contact = () => {
         <p style={{ marginTop: "100px" }}>Veuillez vous connecter.</p>
       )}
 
-      <button
+      {/* <button
         style={{
           padding: "10px 8px",
           backgroundColor: "orange",
@@ -46,7 +47,7 @@ const Contact = () => {
         onClick={deconnexion}
       >
         Déconnexion
-      </button>
+      </button> */}
       <Footer />
     </div>
   );
@@ -57,6 +58,7 @@ export default Contact;
 // import { useQuery } from "@tanstack/react-query";
 // import { useState } from "react";
 // import { useEffect } from "react";
+import Sidebar from "./../../../partials/Sidebar";
 
 // const {
 //   data: userData,
