@@ -4,10 +4,10 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useState } from "react";
 
 const ProductCard = ({ product }) => {
-  const [isFavorited, setFavorited] = useState(false); // Ajoutez un état pour le favori
+  const [isFavorited, setFavorited] = useState(false);
 
   const toggleFavorite = () => {
-    setFavorited(!isFavorited); // Changez l'état favori lorsque l'icône de cœur est cliquée
+    setFavorited(!isFavorited);
   };
 
   return (
@@ -15,27 +15,27 @@ const ProductCard = ({ product }) => {
       <div className="overflow-hidden aspect-w-1 aspect-h-1">
         <img
           style={{ height: "250px", width: "100%", borderRadius: "10px" }}
-          className="object-fill  transition-all duration-300 group-hover:scale-125"
-          src={product.image}
-          alt={product.name}
+          className="object-cover transition-all duration-300 group-hover:scale-125"
+          src={product.image_path}
+          alt={product.nom_produit}
         />
         {isFavorited ? (
           <FaHeart
             onClick={toggleFavorite}
-            className="absolute top-0 right-0 m-2 text-red-500 cursor-pointer"
-          /> // Cœur rempli pour l'état favori
+            className="absolute top-0 right-0 m-2 text-orange-500 cursor-pointer"
+          />
         ) : (
           <FaRegHeart
             onClick={toggleFavorite}
-            className="absolute top-0 right-0 m-2 text-gray-500 cursor-pointer"
-          /> // Cœur vide pour l'état non favori
+            className="absolute top-0 right-0 m-2 text-gray-600 cursor-pointer"
+          />
         )}
       </div>
       <div className="p-2 flex flex-col justify-between h-32">
         <div>
           <div>
             <LinesEllipsis
-              text={product.name}
+              text={product.nom_produit}
               maxLine="2"
               ellipsis=".."
               trimRight
@@ -45,10 +45,12 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
         <div className="flex items-center justify-between mt-4">
-          <span className="text-xl font-semibold text-gray-400">
-            ${product.price}
+          <span className="text-sm font-semibold text-gray-600">
+            {product.prix} FCFA
           </span>
-          <button className="bg-orange-400 rounded px-2 py-1">Panier</button>
+          <button className="pannier rounded bg-gray-800 text-white px-2 py-1">
+            Panier
+          </button>
         </div>
       </div>
     </div>
@@ -57,9 +59,9 @@ const ProductCard = ({ product }) => {
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
+    nom_produit: PropTypes.string.isRequired,
+    prix: PropTypes.number.isRequired,
+    image_path: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
 };

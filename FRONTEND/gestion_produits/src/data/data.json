@@ -2,39 +2,114 @@
   "products": [
     {
       "name": "Apple Smart Watch 6 - Special Edition Apple Smart Watch 6 - Special Edition",
-      "price": 299.0,
+      "price": 49000,
       "image": "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-2.png",
       "description": "Une montre intelligente haut de gamme avec une multitude de fonctionnalités."
     },
     {
-      "name": "Heavy cotton shirt",
-      "price": 1500,
-      "image": "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-4.png",
+      "name": "Baskets A Lacets Pour Homme - Bleu",
+      "price": 4980,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/05/756991/1.jpg?2245",
       "description": "Une chemise en coton lourd, parfaite pour les journées plus fraîches."
     },
     {
-      "name": "Choes3",
-      "price": 1000,
-      "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "name": "Baskets De Sport Pour Homme - Noir",
+      "price": 2990,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/54/199862/1.jpg?9967",
       "description": "Un produit fantastique qui offre une excellente valeur."
     },
     {
       "name": "Produit 4",
-      "price": 2000,
+      "price": 2600,
       "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "description": "Un autre produit de qualité supérieure pour nos clients."
     },
     {
-      "name": "Produit 5",
-      "price": 2000,
-      "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "name": "Hp ORDINATEUR HP - DUAL CORE - 4 GB RAM - ECRAN 15.6 \" - GRIS - CLAVIER AZERTY - 256 SSD - GARANTIE 6 MOIS",
+      "price": 189350,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/933302/1.jpg?6523",
       "description": "Un autre produit de qualité supérieure pour nos clients."
     },
     {
-      "name": "Produit 6",
-      "price": 2000,
-      "image": "https://example.com/product-4.png",
+      "name": "Samsung Galaxy A15 - 2 Sim - 4G -6.6\"- 8/256 Go - 50Mpx- Light Blue - 24 Mois De Garantie",
+      "price": 111900,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/74/739082/1.jpg?3919",
       "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "5 Pièces/ensemble Cartable Sac à Dos - Bleu",
+      "price": 5500,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/03/107462/1.jpg?0811",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "Tecno Spark 20 - 6,6\" - 4G - 4/128 Go - 5000 MAh - 50Mpx - Noir",
+      "price": 64900,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/19/728872/1.jpg?1463",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "XIAOMI Redmi Note 13 - 6.67\" - 4G - 8/256 Go - 3 Camera ( 108 Mpx ) - 5000mAh - Noir - Garantie 12 Mois",
+      "price": 2000,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/73/534972/1.jpg?7705",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "Music Pioneer Casque Bluetooth 5.2 Sans Fil-Compatible Avec IOS Et Android",
+      "price": 7200,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/25/441872/1.jpg?4512",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "Montre Intelligente T55, écran Tactile Complet, 2 Combinaisons De Bracelets Disponibles Pour Android Et IOS",
+      "price": 6.689,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/597872/1.jpg?1584",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    },
+    {
+      "name": "Lenovo PC Portable Lenovo V15 - Ideapad 1 - 15IGL7 - Dualcore - 4GB - 256GB - 256 GO - SSD - Win 11",
+      "price": 145.55,
+      "image": "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/03/491351/1.jpg?6333",
+      "description": "Un autre produit de qualité supérieure pour nos clients."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Téléphone & Tablettes",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/12.png"
+    },
+    {
+      "id": 2,
+      "name": "TV & Electronique",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/10.png"
+    },
+    {
+      "id": 3,
+      "name": "Electromenager Electromenager Electromenager",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/11.png"
+    },
+
+    {
+      "id": 5,
+      "name": "Informatique",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/6.png"
+    },
+    {
+      "id": 6,
+      "name": "Produits pour bébés",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/5.png"
+    },
+    {
+      "id": 7,
+      "name": "Vêtements Homme",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/8.png"
+    },
+    {
+      "id": 8,
+      "name": "Vêtements Femme",
+      "image": "https://ci.jumia.is/cms/1_2024/000/FL/7.png"
     }
   ]
 }

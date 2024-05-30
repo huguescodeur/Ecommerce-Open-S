@@ -1,6 +1,6 @@
 import searchWhiteIcon from "../assets/images/icons/search-ios-white.png";
 
-const Search = () => {
+const SearchComponent = () => {
   return (
     <div className="div-milieu  flex justify-center items-center">
       <form className="flex flex-col md:flex-row gap-3 w-full">
@@ -27,5 +27,4 @@ const Search = () => {
   );
 };
 
-export default Search;
-
+export default SearchComponent;

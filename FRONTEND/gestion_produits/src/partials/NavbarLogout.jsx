@@ -5,11 +5,12 @@ import shoppingBagIcon from "../assets/images/icons/shopping-cart.png";
 import personIcon from "../assets/images/icons/person.png";
 import heartIcon from "../assets/images/icons/heart.png";
 import { useContext } from "react";
-import Searnh from "../components/Search";
+import Search from "../components/SearchComponent";
 import { SidebarContext } from "./SidebarContext";
 
 const NavbarLogout = () => {
   const { sidebarOpen, setSidebarOpen } = useContext(SidebarContext);
+  const { userInfo } = useContext(AppContext);
   return (
     <div
       id="navbar"
@@ -25,33 +26,47 @@ const NavbarLogout = () => {
           </span>
         )}
 
-        <h2 className="quantum text-orange-500 " id="quantum">
-          Quantum
-        </h2>
+        <Link to="/">
+          <h2 className="quantum text-orange-500 " id="quantum">
+            Quantum
+          </h2>
+        </Link>
       </div>
 
-      <Searnh />
+      <Search />
 
       <div className="div-droit  flex justify-around items-center ml-8">
-        <Link to="/about">
-          <div className="div-icon  mr-2">
+        {!userInfo && (
+          <Link to="/connexion">
+            <div className="div-icon  mr-2">
+              <img
+                src={personIcon}
+                alt="Person Icon"
+                className="border-2 rounded"
+              />
+            </div>
+          </Link>
+        )}
+
+        <Link to="/favoris">
+          <div className="div-icon mr-2">
             <img
-              src={personIcon}
-              alt="Person Icon"
+              src={heartIcon}
+              alt="Heart Icon"
               className="border-2 rounded"
             />
           </div>
         </Link>
-        <div className="div-icon mr-2">
-          <img src={heartIcon} alt="Heart Icon" className="border-2 rounded" />
-        </div>
-        <div className="div-icon">
-          <img
-            src={shoppingBagIcon}
-            alt="Shopping Cart Icon"
-            className="border-2 rounded"
-          />
-        </div>
+
+        <Link to="/panier">
+          <div className="div-icon">
+            <img
+              src={shoppingBagIcon}
+              alt="Shopping Cart Icon"
+              className="border-2 rounded"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -251,6 +266,7 @@ export default Sidebar;*/
 // import searchWhiteIcon from "../assets/images/icons/search-ios-white.png";
 // import { Person } from "@mui/icons-material";
 // import SimpleIcon from './../pages/menu/Home/SimpleIcon';
+import { AppContext } from "./../App";
 
 // const navbarRef = useRef();
 

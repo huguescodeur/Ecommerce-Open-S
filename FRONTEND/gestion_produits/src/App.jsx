@@ -11,6 +11,13 @@ import Inscription from "./account/pages/Inscription";
 import Connexion from "./account/pages/Connexion";
 import { getUserInfo } from "./api/account/auth_api";
 import ProtectedRoute from "./ProtectedRoute";
+import Paiement from "./pages/produits/paiement/Paiement";
+import Pannier from "./pages/produits/paiement/Panier";
+import Error from "./partials/Error";
+import Product from "./pages/produits/paiement/Product";
+// import Search from "./components/Search";
+import SearchProduct from "./pages/produits/paiement/SearchProduct";
+import { getProducts, getCategories } from "./api/product/produits_api";
 
 export const AppContext = createContext();
 
@@ -40,11 +47,49 @@ function App() {
     fetchUserInfo();
   }, []);
 
+
+  const [produits, setProduits] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchProduits = async () => {
+      const fetchedProducts = await getProducts();
+      if (fetchedProducts) {
+        setProduits(fetchedProducts);
+      }
+    };
+
+    fetchProduits();
+  }, []);
+
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const fetchedCategories = await getCategories();
+      if (fetchedCategories) {
+        setCategories(fetchedCategories);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   console.log(`Les Infos du User: ${userInfo}`);
+  
   return (
     <div>
       <QueryClientProvider client={client}>
-        <AppContext.Provider value={{ userInfo, loading, setUserInfo }}>
+        <AppContext.Provider
+          value={{
+            userInfo,
+            loading,
+            setUserInfo,
+            produits,
+            setProduits,
+            categories,
+            setCategories,
+          }}
+        >
           <SidebarProvider>
             <Router>
               <Routes>
@@ -52,6 +97,12 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/connexion" element={<Connexion />} />
                 <Route path="/inscription" element={<Inscription />} />
+                {/* <Route path="/search" element={<Search />} /> */}
+                <Route path="/search" element={<SearchProduct />} />
+                <Route path="/paiement" element={<Paiement />} />
+                <Route path="/panier" element={<Pannier />} />
+                <Route path="/produitdetails" element={<Product />} />
+
                 <Route
                   path="/contact"
                   element={
@@ -62,7 +113,7 @@ function App() {
                     )
                   }
                 />
-                <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
+                <Route path="*" element={<Error />} />
               </Routes>
             </Router>
           </SidebarProvider>
